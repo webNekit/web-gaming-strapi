@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "benefits",
+  "info": {
+    "singularName": "benefit",
+    "pluralName": "benefits",
+    "displayName": "Преимущества"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "number": {
+      "type": "biginteger",
+      "required": true
+    },
+    "description": {
+      "type": "richtext",
+      "required": true,
+      "maxLength": 200
+    }
+  }
+}
