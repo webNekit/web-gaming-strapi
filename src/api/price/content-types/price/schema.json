@@ -1,0 +1,26 @@
+{
+  "kind": "singleType",
+  "collectionName": "prices",
+  "info": {
+    "singularName": "price",
+    "pluralName": "prices",
+    "displayName": "Цена",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "packets": {
+      "type": "component",
+      "repeatable": true,
+      "component": "packet.prices",
+      "required": true
+    }
+  }
+}

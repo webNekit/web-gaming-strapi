@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "articles",
+  "collectionName": "games",
   "info": {
-    "singularName": "article",
-    "pluralName": "articles",
-    "displayName": "Статьи",
+    "singularName": "game",
+    "pluralName": "games",
+    "displayName": "Каталог игр",
     "description": ""
   },
   "options": {
@@ -16,12 +16,20 @@
       "type": "string",
       "required": true
     },
-    "smallText": {
-      "type": "richtext",
-      "required": true
+    "genre": {
+      "type": "enumeration",
+      "enum": [
+        "Шутер",
+        "Экшен",
+        "Стелс-экшен",
+        "Файтинг",
+        "Хоррор",
+        "Ролевые игры",
+        "Симуляторы"
+      ]
     },
-    "longText": {
-      "type": "richtext",
+    "date": {
+      "type": "date",
       "required": true
     },
     "image": {
@@ -32,20 +40,10 @@
         "images"
       ]
     },
-    "category": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::category.category",
-      "inversedBy": "articles"
-    },
     "slug": {
       "type": "uid",
       "targetField": "name",
       "required": true
-    },
-    "isBanner": {
-      "type": "boolean",
-      "default": false
     }
   }
 }
